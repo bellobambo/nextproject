@@ -1,7 +1,9 @@
 import React from 'react'
+import styles from './page.module.css'
+
 
 export default function Blog() {
   return (
-    <div>Blog</div>
+    <div className={styles.container} >Blog</div>
   )
 }
