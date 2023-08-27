@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from './page.module.css'
+import DarkToggle from '../DarkMode/page';
 
 
 
@@ -45,6 +46,7 @@ export default function Navbar() {
     <div className={styles.container}>
         <Link href='/' className={styles.logo}>Bambo</Link>
       <div className={styles.links}>
+        <DarkToggle/>
         {
           links.map(link => (
             <Link key={link.id} href={link.url}  className={styles.link}>{link.title}</Link>
