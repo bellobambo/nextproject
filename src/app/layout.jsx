@@ -1,7 +1,9 @@
 import './globals.css'
 import Footer from '../components/footer/Footer'
 import Navbar from '../components/navbar/Navbar'
-import {ThemeProvider} from '../context/Themecontext'
+import { ThemeProvider } from '../context/Themecontext'
+import AuthProvider from '../components/AuthProvider/AuthProvider'
+
 
 
 
@@ -17,11 +19,14 @@ export default function RootLayout({ children }) {
 
       <body >
         <ThemeProvider>
-        <div className="container">
-        <Navbar />
-        {children}
-        <Footer />
-        </div>
+          <AuthProvider>
+
+            <div className="container">
+              <Navbar />
+              {children}
+              <Footer />
+            </div>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
